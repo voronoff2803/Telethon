@@ -466,6 +466,9 @@ class MTProtoSender:
             if not data:
                 continue
 
+            if len(batch) > 6:
+                continue
+
             self._log.debug('Encrypting %d message(s) in %d bytes for sending',
                             len(batch), len(data))
 
